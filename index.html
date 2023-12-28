@@ -8,6 +8,42 @@
     <script src= main.js defer></script>
 </head>
 <body>
-    
+     
+<div class="calculator">
+    <div class="screen">
+        <div id="lastOperationScreen" class="lastScreen"></div>
+        <div id="currentOperationScreen" class="currentScreen">0</div>
+    </div>
+    <div class="buttons-grid">
+        <div>
+        <button id="btnClear" onclick="this.blur();">CLEAR</button>
+        <button id="btnDelete" onclick="this.blur();">DELETE</button>
+        </div>
+        <div>
+        <button class="number" onclick="this.blur();">7</button>
+        <button class="number" onclick="this.blur();">8</button>
+        <button class="number" onclick="this.blur();">9</button>
+        <button class="operator" onclick="this.blur();">/</button>
+        </div>
+        <div>
+        <button class="number" onclick="this.blur();">4</button>
+        <button class="number" onclick="this.blur();">5</button>
+        <button class="number" onclick="this.blur();">6</button>
+        <button class="operator" onclick="this.blur();">*</button>
+        </div>
+        <div>
+        <button class="number" onclick="this.blur();">1</button>
+        <button class="number" onclick="this.blur();">2</button>
+        <button class="number" onclick="this.blur();">3</button>
+        <button class="operator" onclick="this.blur();">-</button>
+        </div>
+    <div>
+        <button class="number" onclick="this.blur();">0</button>
+        <button onclick="this.blur();" id="btnDot">.</button>
+        <button  onclick="this.blur();" id="btnEqual">=</button>
+        <button class="operator" onclick="this.blur();">+</button>
+    </div>
+    </div>
+</div>
 </body>
 </html>
