@@ -5,7 +5,7 @@ body {
   body > div {margin:auto;}
 .calculator{
     width: 400px;
-    height: 550px;
+    min-height: 550px;
     background-color: lightgray;
     border:black solid 2px;
     display:flex;
@@ -13,28 +13,26 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    
 }
 .screen{
     width: 340px;
-    height: 100px;
+   min-height: 100px;
     border:black solid 2px;
-    background-color: black;
     border-radius: 8px;
     text-align: end;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 .lastScreen{
-    height: 40px;
+   min-height: 40px;
     font-size:22px;
     margin-right: 10px;
     margin-top: 6px;
-    color:white;
 }
 .currentScreen{
-    height:60px;
+    min-height:60px;
     font-size:45px;
     margin-right: 8px;
-    color:white;
 }
 .buttons-grid{
     display:flex;
@@ -43,8 +41,6 @@ body {
     justify-content: center;
     gap:6px;
     margin-top:20px;
-    
- 
 }
 .number, .operator ,#btnDot ,#btnEqual{
 width:75px;
