@@ -15,7 +15,7 @@ btnEqual.addEventListener('click', evaluate);
 btnClear.addEventListener('click', clear);
 btnDelete.addEventListener('click', deleting);
 btnDot.addEventListener('click', dot);
-window.addEventListener('keydown',keyboardInput);
+window.addEventListener('keydown', keyboardInput);
 
 num.forEach(button => {
     button.addEventListener('click', () => {
@@ -75,9 +75,16 @@ function dot() {
     if (currentScreen.textContent.includes('.')) return;
     currentScreen.textContent += '.';
 }
-/*function keyboardInput(e){
 
-}*/
+function keyboardInput(e) {
+    if (e.key >= 0 && e.key <= 9) { appendNumbers(e.key); }
+    if (e.key === "Backspace") { deleting(); }
+    if (e.key === "Enter" || e.key === "=") { evaluate(); }
+    if (e.key === "Escape") { clear(); }
+    if (e.key === '.') { dot() };
+    if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') { appendOperator(e.key); }
+}
+
 const add = function (num1, num2) {
     return num1 + num2;
 }
